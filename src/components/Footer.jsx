@@ -33,6 +33,7 @@ export default function Footer() {
               <li><a href="#home" onClick={handleScrollToTop}>Home</a></li>
               <li><a href="#services">Services</a></li>
               <li><a href="#rentals">Rentals & Flavors</a></li>
+              <li><a href="#events">Event Packages</a></li>
               <li><a href="#products">Foggit Collection</a></li>
               <li><a href="#book">Book Session</a></li>
             </ul>

@@ -31,8 +31,13 @@ export default function BookingForm() {
     
     // Generate text message for WhatsApp
     const serviceLabels = {
-      'standard-rent': 'Standard Rental Package (₹1000)',
-      'premium-rent': 'Premium Rental Package (₹1200)',
+      'standard-rent': 'Standard Rental Package (₹1,000)',
+      'premium-rent': 'Premium Rental Package (₹1,200)',
+      'wedding-pkg': 'Wedding Luxury Event Package (Starting ₹15,000)',
+      'birthday-pkg': 'Vibrant Birthday Bash Event Package (Starting ₹5,000)',
+      'airbnb-pkg': 'Villa & Airbnb Stayover Event Package (Starting ₹3,500)',
+      'club-pkg': 'VIP Club & Lounge Event Package (Starting ₹10,000)',
+      'corporate-pkg': 'Executive Corporate Mixer Event Package (Custom)',
       'buy-hookah': 'Buy Hookah (Foggit Collection)',
       'buy-accessories': 'Buy Molasses / Accessories'
     };
@@ -124,8 +129,17 @@ Please confirm my booking!`;
                 >
                   <option value="standard-rent">Rent: Standard Package (₹1,000)</option>
                   <option value="premium-rent">Rent: Premium Package (₹1,200)</option>
-                  <option value="buy-hookah">Buy: Foggit Hookah</option>
-                  <option value="buy-accessories">Buy: Molasses / Accessories</option>
+                  <optgroup label="Luxury Event Packages">
+                    <option value="wedding-pkg">Event: Wedding Luxury Package (Starting ₹15,000)</option>
+                    <option value="birthday-pkg">Event: Vibrant Birthday Bash (Starting ₹5,000)</option>
+                    <option value="airbnb-pkg">Event: Villa & Airbnb Stayover (Starting ₹3,500)</option>
+                    <option value="club-pkg">Event: VIP Club & Lounge Service (Starting ₹10,000)</option>
+                    <option value="corporate-pkg">Event: Executive Corporate Mixer (Custom)</option>
+                  </optgroup>
+                  <optgroup label="Purchase Items">
+                    <option value="buy-hookah">Buy: Foggit Hookah</option>
+                    <option value="buy-accessories">Buy: Molasses / Accessories</option>
+                  </optgroup>
                 </select>
               </div>
 

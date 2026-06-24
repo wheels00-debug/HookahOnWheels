@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import Rentals from './components/Rentals';
+import EventPackages from './components/EventPackages';
 import Products from './components/Products';
 import BookingForm from './components/BookingForm';
 import Footer from './components/Footer';
@@ -37,6 +38,9 @@ function App() {
 
       {/* Rentals & Packages Section */}
       <Rentals />
+
+      {/* Luxury Event Packages Showcase */}
+      <EventPackages />
 
       {/* Premium Foggit Hookahs Section */}
       <Products />

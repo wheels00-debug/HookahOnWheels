@@ -53,6 +53,7 @@ export default function Navbar() {
           <li><a href="#home" onClick={(e) => handleLinkClick(e, 'home')} className="nav-link">Home</a></li>
           <li><a href="#services" onClick={(e) => handleLinkClick(e, 'services')} className="nav-link">Services</a></li>
           <li><a href="#rentals" onClick={(e) => handleLinkClick(e, 'rentals')} className="nav-link">Rentals</a></li>
+          <li><a href="#events" onClick={(e) => handleLinkClick(e, 'events')} className="nav-link">Events</a></li>
           <li><a href="#products" onClick={(e) => handleLinkClick(e, 'products')} className="nav-link">Buy Hookahs</a></li>
           <li><a href="#contact" onClick={(e) => handleLinkClick(e, 'contact')} className="nav-link">Contact</a></li>
         </ul>
@@ -74,6 +75,7 @@ export default function Navbar() {
           <li><a href="#home" onClick={(e) => handleLinkClick(e, 'home')} className="mobile-nav-link">Home</a></li>
           <li><a href="#services" onClick={(e) => handleLinkClick(e, 'services')} className="mobile-nav-link">Services</a></li>
           <li><a href="#rentals" onClick={(e) => handleLinkClick(e, 'rentals')} className="mobile-nav-link">Rentals</a></li>
+          <li><a href="#events" onClick={(e) => handleLinkClick(e, 'events')} className="mobile-nav-link">Events</a></li>
           <li><a href="#products" onClick={(e) => handleLinkClick(e, 'products')} className="mobile-nav-link">Buy Hookahs</a></li>
           <li><a href="#contact" onClick={(e) => handleLinkClick(e, 'contact')} className="mobile-nav-link">Contact</a></li>
           <li style={{ marginTop: '20px' }}>
