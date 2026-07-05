@@ -1,16 +1,15 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import Rentals from './components/Rentals';
-import EventPackages from './components/EventPackages';
-import Products from './components/Products';
-import InstagramFeed from './components/InstagramFeed';
-import Blog from './components/Blog';
-import Faqs from './components/Faqs';
-import Newsletter from './components/Newsletter';
 import BookingForm from './components/BookingForm';
 import Footer from './components/Footer';
+
+// Lazy loaded Pages for Code Splitting
+const Home = lazy(() => import('./pages/Home'));
+const ServicesPage = lazy(() => import('./pages/ServicesPage'));
+const StorePage = lazy(() => import('./pages/StorePage'));
+const JournalPage = lazy(() => import('./pages/JournalPage'));
+const FaqPage = lazy(() => import('./pages/FaqPage'));
 
 function App() {
   const handleFloatingClick = (e) => {
@@ -34,34 +33,23 @@ function App() {
       {/* Top Sticky Glass Navbar */}
       <Navbar />
 
-      {/* Fullscreen Interactive Smoke Hero */}
-      <Hero />
+      <main>
+        <Suspense fallback={
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', color: '#d4af37' }}>
+            <div className="animate-pulse-slow">Loading Premium Experience...</div>
+          </div>
+        }>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/store" element={<StorePage />} />
+            <Route path="/journal" element={<JournalPage />} />
+            <Route path="/faqs" element={<FaqPage />} />
+          </Routes>
+        </Suspense>
+      </main>
 
-      {/* Premium Shisha Services */}
-      <Services />
-
-      {/* Rentals & Packages Showcase */}
-      <Rentals />
-
-      {/* Event Luxury Packages Showcase */}
-      <EventPackages />
-
-      {/* E-Commerce Elite Store Showcase */}
-      <Products />
-
-      {/* Simulated Premium Instagram Feed */}
-      <InstagramFeed />
-
-      {/* The Luxury Journal (Blog) */}
-      <Blog />
-
-      {/* FAQs Accordion System */}
-      <Faqs />
-
-      {/* Invitation Newsletter Sign-up */}
-      <Newsletter />
-
-      {/* white-glove Booking Form */}
+      {/* Globally available Booking Form */}
       <BookingForm />
 
       {/* Luxury Footer with badging */}

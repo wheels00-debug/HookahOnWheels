@@ -142,6 +142,34 @@
   color: var(--gold-light);
 }
 
+.blog-full-content {
+  overflow: hidden;
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.blog-full-content p {
+  margin-bottom: 16px;
+}
+
+.blog-full-content h4 {
+  color: var(--gold-light);
+  margin: 24px 0 12px 0;
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.blog-card.expanded {
+  grid-column: 1 / -1;
+}
+
+.blog-card.expanded .blog-card-banner {
+  height: 220px;
+}
+
 @media (max-width: 992px) {
   .blog-grid {
     grid-template-columns: repeat(2, 1fr);

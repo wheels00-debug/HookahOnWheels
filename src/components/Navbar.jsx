@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, ShoppingBag, Menu, X } from 'lucide-react';
+import { NavLink } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import './Navbar.css';
 
@@ -61,20 +62,19 @@ export default function Navbar() {
       transition={{ duration: 0.5, ease: 'easeOut' }}
     >
       <div className="navbar-container">
-        <a href="#home" onClick={(e) => handleLinkClick(e, 'home')} className="navbar-logo">
+        <NavLink to="/" onClick={() => setIsMobileMenuOpen(false)} className="navbar-logo">
           <img src={logo} alt="Hookah On Wheels Logo" className="logo-img" />
           <span className="logo-text heading-serif gold-text-gradient">Hookah On Wheels</span>
-        </a>
+        </NavLink>
 
         {/* Desktop Navigation */}
         <ul className="navbar-menu">
-          <li><a href="#home" onClick={(e) => handleLinkClick(e, 'home')} className="nav-link">Home</a></li>
-          <li><a href="#services" onClick={(e) => handleLinkClick(e, 'services')} className="nav-link">Services</a></li>
-          <li><a href="#rentals" onClick={(e) => handleLinkClick(e, 'rentals')} className="nav-link">Rentals</a></li>
-          <li><a href="#products" onClick={(e) => handleLinkClick(e, 'products')} className="nav-link">Store</a></li>
-          <li><a href="#blog" onClick={(e) => handleLinkClick(e, 'blog')} className="nav-link">Journal</a></li>
-          <li><a href="#faqs" onClick={(e) => handleLinkClick(e, 'faqs')} className="nav-link">FAQs</a></li>
-          <li><a href="#contact" onClick={(e) => handleLinkClick(e, 'contact')} className="nav-link">Contact</a></li>
+          <li><NavLink to="/" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Home</NavLink></li>
+          <li><NavLink to="/services" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Services</NavLink></li>
+          <li><NavLink to="/store" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Store</NavLink></li>
+          <li><NavLink to="/journal" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Journal</NavLink></li>
+          <li><NavLink to="/faqs" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>FAQs</NavLink></li>
+          <li><a href="#book" onClick={(e) => handleLinkClick(e, 'book')} className="nav-link">Contact</a></li>
         </ul>
 
         <div className="navbar-actions">
@@ -127,13 +127,12 @@ export default function Navbar() {
             transition={{ duration: 0.3 }}
           >
             <ul className="mobile-menu-links">
-              <li><a href="#home" onClick={(e) => handleLinkClick(e, 'home')} className="mobile-nav-link">Home</a></li>
-              <li><a href="#services" onClick={(e) => handleLinkClick(e, 'services')} className="mobile-nav-link">Services</a></li>
-              <li><a href="#rentals" onClick={(e) => handleLinkClick(e, 'rentals')} className="mobile-nav-link">Rentals</a></li>
-              <li><a href="#products" onClick={(e) => handleLinkClick(e, 'products')} className="mobile-nav-link">Store</a></li>
-              <li><a href="#blog" onClick={(e) => handleLinkClick(e, 'blog')} className="mobile-nav-link">Journal</a></li>
-              <li><a href="#faqs" onClick={(e) => handleLinkClick(e, 'faqs')} className="mobile-nav-link">FAQs</a></li>
-              <li><a href="#contact" onClick={(e) => handleLinkClick(e, 'contact')} className="mobile-nav-link">Contact</a></li>
+              <li><NavLink to="/" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>Home</NavLink></li>
+              <li><NavLink to="/services" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>Services</NavLink></li>
+              <li><NavLink to="/store" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>Store</NavLink></li>
+              <li><NavLink to="/journal" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>Journal</NavLink></li>
+              <li><NavLink to="/faqs" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>FAQs</NavLink></li>
+              <li><a href="#book" onClick={(e) => handleLinkClick(e, 'book')} className="mobile-nav-link">Contact</a></li>
               <li style={{ marginTop: '20px' }}>
                 <a href="#book" onClick={(e) => handleLinkClick(e, 'book')} className="btn-gold" style={{ width: '100%', justifyContent: 'center' }}>Book Now</a>
               </li>
