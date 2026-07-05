@@ -27,11 +27,11 @@ export default function Newsletter() {
         <div className="newsletter-card-container">
           {/* Decorative glowing gradient ring */}
           <div className="newsletter-glow-ring"></div>
-          
+
           <div className="newsletter-card glass-panel">
             <AnimatePresence mode="wait">
               {!submitted ? (
-                <motion.div 
+                <motion.div
                   key="form-container"
                   className="newsletter-form-container"
                   initial={{ opacity: 0, y: 15 }}
@@ -42,7 +42,7 @@ export default function Newsletter() {
                   <div className="newsletter-icon-wrapper">
                     <Mail className="newsletter-mail-icon" size={28} />
                   </div>
-                  
+
                   <h2 className="heading-serif newsletter-title">
                     JOIN THE <span className="gold-text-gradient">INNER CIRCLE</span>
                   </h2>
@@ -52,17 +52,17 @@ export default function Newsletter() {
 
                   <form onSubmit={handleSubmit} className="newsletter-form">
                     <div className="input-group">
-                      <input 
-                        type="email" 
-                        placeholder="ENTER YOUR EMAIL ADDRESS" 
+                      <input
+                        type="email"
+                        placeholder="ENTER YOUR EMAIL ADDRESS"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        required 
+                        required
                         disabled={loading}
                         className="newsletter-input"
                       />
-                      <button 
-                        type="submit" 
+                      <button
+                        type="submit"
                         disabled={loading}
                         className="newsletter-submit-btn"
                         aria-label="Subscribe"
@@ -83,7 +83,7 @@ export default function Newsletter() {
                   </p>
                 </motion.div>
               ) : (
-                <motion.div 
+                <motion.div
                   key="success-container"
                   className="newsletter-success-container"
                   initial={{ opacity: 0, scale: 0.95 }}
@@ -91,7 +91,7 @@ export default function Newsletter() {
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <motion.div 
+                  <motion.div
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ type: "spring", stiffness: 200, damping: 15, delay: 0.1 }}
@@ -102,7 +102,7 @@ export default function Newsletter() {
                   <p className="success-message">
                     An confirmation invitation has been sent to your inbox. Prepare to elevate your smoke sessions.
                   </p>
-                  <motion.button 
+                  <motion.button
                     onClick={() => setSubmitted(false)}
                     className="btn-outline-gold success-btn"
                     whileHover={{ scale: 1.03 }}
