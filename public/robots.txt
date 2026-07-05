@@ -1,0 +1,12 @@
+# User-agent: * (Target all bots)
+User-agent: *
+Allow: /
+Allow: /assets/
+Disallow: /admin/
+Disallow: /checkout/
+
+# Host Domain
+Host: https://hookah-on-wheels.vercel.app
+
+# XML Sitemap Location
+Sitemap: https://hookah-on-wheels.vercel.app/sitemap.xml

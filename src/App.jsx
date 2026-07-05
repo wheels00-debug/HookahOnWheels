@@ -5,6 +5,10 @@ import Services from './components/Services';
 import Rentals from './components/Rentals';
 import EventPackages from './components/EventPackages';
 import Products from './components/Products';
+import InstagramFeed from './components/InstagramFeed';
+import Blog from './components/Blog';
+import Faqs from './components/Faqs';
+import Newsletter from './components/Newsletter';
 import BookingForm from './components/BookingForm';
 import Footer from './components/Footer';
 
@@ -27,28 +31,40 @@ function App() {
 
   return (
     <>
-      {/* Top Navbar */}
+      {/* Top Sticky Glass Navbar */}
       <Navbar />
 
-      {/* Hero Header Section */}
+      {/* Fullscreen Interactive Smoke Hero */}
       <Hero />
 
-      {/* Services Section */}
+      {/* Premium Shisha Services */}
       <Services />
 
-      {/* Rentals & Packages Section */}
+      {/* Rentals & Packages Showcase */}
       <Rentals />
 
-      {/* Luxury Event Packages Showcase */}
+      {/* Event Luxury Packages Showcase */}
       <EventPackages />
 
-      {/* Premium Foggit Hookahs Section */}
+      {/* E-Commerce Elite Store Showcase */}
       <Products />
 
-      {/* Booking Form Section */}
+      {/* Simulated Premium Instagram Feed */}
+      <InstagramFeed />
+
+      {/* The Luxury Journal (Blog) */}
+      <Blog />
+
+      {/* FAQs Accordion System */}
+      <Faqs />
+
+      {/* Invitation Newsletter Sign-up */}
+      <Newsletter />
+
+      {/* white-glove Booking Form */}
       <BookingForm />
 
-      {/* Footer Details */}
+      {/* Luxury Footer with badging */}
       <Footer />
 
       {/* Floating Action Button for Booking */}

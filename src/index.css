@@ -36,6 +36,11 @@
   padding: 0;
 }
 
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
 body {
   background-color: var(--bg-primary);
   background-image: 
