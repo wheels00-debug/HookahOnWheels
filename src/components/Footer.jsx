@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Instagram, Phone, Mail, MapPin, Clock, ChevronUp, Shield, Award, Sparkles } from 'lucide-react';
 import logo from '../assets/logo.png';
 import './Footer.css';
@@ -62,10 +63,10 @@ export default function Footer() {
           
           {/* Brand Info */}
           <div className="footer-grid-col brand-col">
-            <a href="#home" onClick={handleScrollToTop} className="footer-logo">
+            <Link to="/" onClick={handleScrollToTop} className="footer-logo">
               <img src={logo} alt="Hookah On Wheels Logo" className="footer-logo-img" />
               <span className="footer-logo-text heading-serif gold-text-gradient">Hookah On Wheels</span>
-            </a>
+            </Link>
             <p className="brand-tagline">
               Bespoke luxury hookah rentals, sales, and white-glove event shisha sommelier services. Elevating your celebrations with Rolex-grade quality and design.
             </p>
@@ -86,12 +87,12 @@ export default function Footer() {
           <div className="footer-grid-col links-col">
             <h4 className="footer-col-title heading-serif">Quick Links</h4>
             <ul className="footer-col-links-list">
-              <li><a href="#home" onClick={handleScrollToTop}>Home</a></li>
-              <li><a href="#services" onClick={(e) => handleLinkClick(e, 'services')}>Services</a></li>
-              <li><a href="#rentals" onClick={(e) => handleLinkClick(e, 'rentals')}>Rental Packages</a></li>
-              <li><a href="#products" onClick={(e) => handleLinkClick(e, 'products')}>Store & Products</a></li>
-              <li><a href="#blog" onClick={(e) => handleLinkClick(e, 'blog')}>The Journal</a></li>
-              <li><a href="#faqs" onClick={(e) => handleLinkClick(e, 'faqs')}>FAQs</a></li>
+              <li><Link to="/" onClick={handleScrollToTop}>Home</Link></li>
+              <li><Link to="/services" onClick={handleScrollToTop}>Services</Link></li>
+              <li><Link to="/services" onClick={handleScrollToTop}>Rental Packages</Link></li>
+              <li><Link to="/store" onClick={handleScrollToTop}>Store & Products</Link></li>
+              <li><Link to="/journal" onClick={handleScrollToTop}>The Journal</Link></li>
+              <li><Link to="/faqs" onClick={handleScrollToTop}>FAQs</Link></li>
             </ul>
           </div>
 
