@@ -41,6 +41,21 @@ img, video {
   height: auto;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  h1, h2, h3, h4, h5, h6 {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+}
+
 body {
   background-color: var(--bg-primary);
   background-image: 

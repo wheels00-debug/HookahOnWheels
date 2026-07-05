@@ -7,7 +7,10 @@
 .newsletter-card-container {
   position: relative;
   max-width: 850px;
+  width: 100%;
   margin: 0 auto;
+  overflow: hidden;
+  padding: 10px; /* buffer for blur if needed, or just let overflow clip */
 }
 
 /* Backlit ambient gold glow */
@@ -206,7 +209,14 @@
   }
   
   .newsletter-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    word-wrap: break-word;
+  }
+  
+  .newsletter-subtitle {
+    font-size: 0.9rem;
+    padding: 0 5px;
   }
   
   .input-group {
@@ -216,18 +226,26 @@
     border: none;
     gap: 12px;
     padding: 0;
+    width: 100%;
+    max-width: 100%;
   }
   
   .newsletter-input {
     background: rgba(0, 0, 0, 0.4);
     border: 1px solid var(--gold-border);
     border-radius: 30px;
-    padding: 14px 20px;
+    padding: 12px 15px;
     width: 100%;
+    max-width: 100%;
+    font-size: 0.8rem;
+    letter-spacing: 0;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
   }
   
   .newsletter-submit-btn {
     width: 100%;
     border-radius: 30px;
+    box-sizing: border-box;
   }
 }

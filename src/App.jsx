@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import BookingForm from './components/BookingForm';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 // Lazy loaded Pages for Code Splitting
 const Home = lazy(() => import('./pages/Home'));
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <>
+      <ScrollToTop />
       {/* Top Sticky Glass Navbar */}
       <Navbar />
 
@@ -56,16 +58,7 @@ function App() {
       <Footer />
 
       {/* Floating Action Button for Booking */}
-      <a 
-        href="#book" 
-        onClick={handleFloatingClick} 
-        className="whatsapp-float animate-float"
-        title="Book Hookah on WhatsApp"
-        aria-label="Book on WhatsApp"
-      >
-        <span className="wa-icon-glow"></span>
-        <span className="wa-icon">💬</span>
-      </a>
+
     </>
   );
 }
